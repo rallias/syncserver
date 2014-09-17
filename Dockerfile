@@ -15,10 +15,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     vim locales \
     && apt-get clean
 
-RUN locale-gen C.UTF-8 && LANG=C.UTF-8 /usr/sbin/update-locale
-
-ENV LANG C.UTF-8
-
 RUN useradd --create-home app
 
 # Build the Sync server
