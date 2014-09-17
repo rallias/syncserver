@@ -5,8 +5,8 @@
 #           http://docker.io/gettingstarted              #
 ##########################################################
 
-FROM debian:7.4
-MAINTAINER Dan Callahan <dan.callahan@gmail.com>
+FROM ubuntu:latest
+MAINTAINER Andrew Pietila <me@ajp.xyz>
 
 # Base system setup
 
