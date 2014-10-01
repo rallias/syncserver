@@ -32,12 +32,13 @@ USER app
 RUN mkdir -p /home/app/syncserver
 ADD ./ /home/app/syncserver
 WORKDIR /home/app/syncserver
+RUN mkdir -p /home/app/data
 
 RUN make build
 
 # Run the Sync server
 
 EXPOSE 5000
+VOLUME ["/home/app/data"]
 
-ENTRYPOINT ["/usr/bin/make"]
-CMD ["serve"]
+CMD ["bash startup.sh"]
